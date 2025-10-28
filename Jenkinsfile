@@ -36,6 +36,7 @@ pipeline {
     post {
         success {
             echo '✅ Flask app ran successfully and tests passed!'
+            echo 'cicd'
         }
         failure {
             echo '❌ Build failed!'
