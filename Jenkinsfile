@@ -31,7 +31,7 @@ pipeline {
         //         sh 'pytest test_app.py'
         //     }
         // }
-    // }
+    }
 
     post {
         success {
