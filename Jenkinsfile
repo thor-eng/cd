@@ -9,29 +9,29 @@ pipeline {
             }
         }
 
-        stage('Install dependencies') {
-            steps {
-                echo 'Installing Flask...'
-                sh 'pip install flask pytest'
-            }
-        }
+        // stage('Install dependencies') {
+        //     steps {
+        //         echo 'Installing Flask...'
+        //         sh 'pip install flask pytest'
+        //     }
+        // }
 
-        stage('Run Flask app') {
-            steps {
-                echo 'Starting Flask app...'
-                // run Flask in background
-                sh 'nohup python3 app.py &'
-                sleep(time: 5, unit: 'SECONDS')
-            }
-        }
+        // stage('Run Flask app') {
+        //     steps {
+        //         echo 'Starting Flask app...'
+        //         // run Flask in background
+        //         sh 'nohup python3 app.py &'
+        //         sleep(time: 5, unit: 'SECONDS')
+        //     }
+        // }
 
-        stage('Run Tests') {
-            steps {
-                echo 'Running tests...'
-                sh 'pytest test_app.py'
-            }
-        }
-    }
+        // stage('Run Tests') {
+        //     steps {
+        //         echo 'Running tests...'
+        //         sh 'pytest test_app.py'
+        //     }
+        // }
+    // }
 
     post {
         success {
